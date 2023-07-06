@@ -52,8 +52,17 @@ createApp({
         },
         doneItem(item) {
 
-            // SETTO LA VARIABILE DONE DELL'ITEM CLICCATO SU TRUE
-            item.done = true;
+            // LA VARIABILE DONE DELL'ITEM CLICCATO è UGUALE A FALSE
+            if (item.done === false) {
+
+                // SETTO LA VARIABILE DONE DELL'ITEM CLICCATO SU TRUE
+                item.done = true;
+
+            } else { // LA VARIABILE DONE DELL'ITEM CLICCATO è UGUALE A TRUE
+
+                // SETTO LA VARIABILE DONE DELL'ITEM CLICCATO SU FALSE
+                item.done = false;
+            }
         }
     },
 }).mount('#app'); // RICHIAMO IL CONTAINER HTML DOVE APPLICARE LA FUNZIONE CREATE_APP
