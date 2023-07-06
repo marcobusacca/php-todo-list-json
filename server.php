@@ -13,7 +13,10 @@
         // RECUPERO NEW_ITEM
         $newItem = $_POST['newItem'];
 
-        // INSERISCO DENTRO L'ARRAY IL NEW_ITEM
+        // SISTEMO LA VARIABILE DONE DI NEW_ITEM
+        $newItem['done'] = false;
+
+        // INSERISCO DENTRO L'ARRAY IL CONTENUTO DI NEW_ITEM
         array_push($dataDecoded, $newItem);
 
         // AGGIORNO IL FILE "TODOLIST.JSON"
