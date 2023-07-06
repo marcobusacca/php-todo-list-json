@@ -50,6 +50,11 @@ createApp({
                 });
             }
         },
+        deleteItem(index) {
+
+            // CANCELLO L'ITEM CLICCATO DALL'ARRAY TODO_LIST
+            this.todoList.splice(index, 1);
+        },
         doneItem(item) {
 
             // LA VARIABILE DONE DELL'ITEM CLICCATO è UGUALE A FALSE

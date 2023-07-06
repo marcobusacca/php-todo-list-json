@@ -41,10 +41,13 @@
                                 <h1 class="display-1">Todo List</h1>
                             </div>
                             <!-- Todo List Col -->
-                            <div class="col-12 my-3">
+                            <div class="col-12 my-3" v-if="todoList.length !== 0">
                                 <!-- Todo List -->
                                 <ul class="list-group border border-2 rounded-2">
-                                    <li class="list-group-item" :class=" item.done ? 'text-decoration-line-through' : '' " v-for="(item, index) in todoList" v-text="item.text" @click="doneItem(item)"></li>
+                                    <li class="list-group-item d-flex justify-content-between" v-for="(item, index) in todoList">
+                                        <span :class="item.done ? 'text-decoration-line-through' : ''" v-text="item.text" @click="doneItem(item)"></span>
+                                        <button class="btn btn-sm btn-outline-danger" @click="deleteItem(index)">Elimina</button>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Input Col -->
