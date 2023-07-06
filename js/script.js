@@ -16,7 +16,8 @@ createApp({
     },
     created() {
         axios.get(this.apiUrl).then((result) => {
-            console.log(result.data);
+            // INSERISCO IL RISULTATO DELLA CHIAMATA AXIOS GET DENTRO LA VARIABILE TODO_LIST
+            this.todoList = result.data;
         });
     },
 }).mount('#app'); // RICHIAMO IL CONTAINER HTML DOVE APPLICARE LA FUNZIONE CREATE_APP
