@@ -15,6 +15,7 @@ createApp({
         }
     },
     created() {
+        // CHIAMATA AXIOS GET OTTENIMENTO DATI DAL SERVER.PHP
         axios.get(this.apiUrl).then((result) => {
             // INSERISCO IL RISULTATO DELLA CHIAMATA AXIOS GET DENTRO LA VARIABILE TODO_LIST
             this.todoList = result.data;

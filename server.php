@@ -1,9 +1,9 @@
 <?php
     // RECUPERO IL CONTENUTO DEL FILE "TODOLIST.JSON"
-    $string = file_get_contents('data/todolist.json');
+    $data = file_get_contents('data/todolist.json');
 
     // TRASFORMO L'OGGETTO JSON IN UN ARRAY ASSOCIATIVO PHP
-    $arrayDecoded = json_decode($string, true);
+    $dataDecoded = json_decode($data, true);
 
 /******************************************************************************************************
     OPERAZIONI DI MODIFICA ARRAY ASSOCIATIVO PHP
@@ -13,5 +13,5 @@
     header('Content-Type: application/json');
 
     // TRASFORMO L'ARRAY ASSOCIATIVO PHP IN OGGETTO JSON
-    echo json_encode($arrayDecoded);
+    echo json_encode($dataDecoded);
 ?>
