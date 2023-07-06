@@ -9,6 +9,10 @@ createApp({
     data() {
         return {
             // VARIABILI VUE.JS
+            apiUrl: 'server.php',
         }
-    }
+    },
+    created() {
+        axios.get(this.apiUrl).then((result) => { });
+    },
 }).mount('#app'); // RICHIAMO IL CONTAINER HTML DOVE APPLICARE LA FUNZIONE CREATE_APP
