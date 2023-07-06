@@ -49,6 +49,11 @@ createApp({
                     this.todoItem = '';
                 });
             }
+        },
+        doneItem(item) {
+
+            // SETTO LA VARIABILE DONE DELL'ITEM CLICCATO SU TRUE
+            item.done = true;
         }
     },
 }).mount('#app'); // RICHIAMO IL CONTAINER HTML DOVE APPLICARE LA FUNZIONE CREATE_APP
