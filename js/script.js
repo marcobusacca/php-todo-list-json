@@ -10,6 +10,8 @@ createApp({
         return {
             // VARIABILI VUE.JS
             apiUrl: 'server.php',
+            todoList: [],
+            todoItem: '',
         }
     },
     created() {
