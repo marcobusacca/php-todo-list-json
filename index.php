@@ -26,7 +26,9 @@
         <title>php-todo-list-json</title>
     </head>
     <body>
+        <!-- Page Wrapper -->
         <div class="wrapper bg-body-secondary d-flex justify-content-center">
+            <!-- App Container -->
             <div id="app">
                 <!-- Main -->
                 <main>
