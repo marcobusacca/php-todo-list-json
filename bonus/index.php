@@ -1,5 +1,4 @@
 <?php
-
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +44,7 @@
                                 <!-- Todo List -->
                                 <ul class="list-group border border-2 rounded-2">
                                     <li class="list-group-item d-flex justify-content-between" v-for="(item, index) in todoList">
-                                        <span :class="item.done ? 'text-decoration-line-through' : ''" v-text="item.text" @click="doneItem(item)"></span>
+                                        <span :class="item.done ? 'text-decoration-line-through' : ''" v-text="item.text" @click="doneItem(index)"></span>
                                         <button class="btn btn-sm btn-outline-danger" @click="deleteItem(index)">Elimina</button>
                                     </li>
                                 </ul>

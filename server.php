@@ -20,7 +20,7 @@
         array_push($dataDecoded, $newItem);
 
         // AGGIORNO IL FILE "TODOLIST.JSON"
-        $data = file_put_contents('data/todolist.json', json_encode($dataDecoded));
+        file_put_contents('data/todolist.json', json_encode($dataDecoded));
     }
 
 // FINE OPERAZIONI DI MODIFICA ARRAY ASSOCIATIVO PHP

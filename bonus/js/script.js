@@ -52,22 +52,39 @@ createApp({
         },
         deleteItem(index) {
 
-            // CANCELLO L'ITEM CLICCATO DALL'ARRAY TODO_LIST
-            this.todoList.splice(index, 1);
+            // DEFINISCO IL PARAMETRO DATA DA PASSARE ALLA CHIAMATA AXIOS POST
+            const data = {
+                deletedItem: index,
+            };
+
+            // CHIAMATA AXIOS POST INSERIMENTO DATI NEL SERVER.PHP
+            axios.post(this.apiUrl, data, {
+
+                headers: { 'Content-Type': 'multipart/form-data' }
+
+            }).then((result) => {
+
+                // AGGIORNO LA TODO_LIST
+                this.todoList = result.data;
+            });
         },
-        doneItem(item) {
+        doneItem(index) {
 
-            // LA VARIABILE DONE DELL'ITEM CLICCATO è UGUALE A FALSE
-            if (item.done === false) {
+            // DEFINISCO IL PARAMETRO DATA DA PASSARE ALLA CHIAMATA AXIOS POST
+            const data = {
+                clickedItem: index,
+            };
 
-                // SETTO LA VARIABILE DONE DELL'ITEM CLICCATO SU TRUE
-                item.done = true;
+            // CHIAMATA AXIOS POST INSERIMENTO DATI NEL SERVER.PHP
+            axios.post(this.apiUrl, data, {
 
-            } else { // LA VARIABILE DONE DELL'ITEM CLICCATO è UGUALE A TRUE
+                headers: { 'Content-Type': 'multipart/form-data' }
 
-                // SETTO LA VARIABILE DONE DELL'ITEM CLICCATO SU FALSE
-                item.done = false;
-            }
+            }).then((result) => {
+
+                // AGGIORNO LA TODO_LIST
+                this.todoList = result.data;
+            });
         }
     },
 }).mount('#app'); // RICHIAMO IL CONTAINER HTML DOVE APPLICARE LA FUNZIONE CREATE_APP

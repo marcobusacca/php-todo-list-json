@@ -20,7 +20,33 @@
         array_push($dataDecoded, $newItem);
 
         // AGGIORNO IL FILE "TODOLIST.JSON"
-        $data = file_put_contents('data/todolist.json', json_encode($dataDecoded));
+        file_put_contents('data/todolist.json', json_encode($dataDecoded));
+    }
+
+    // CONTROLLO SE è STATO CLICCATO QUALCHE ELEMENTO
+    if(isset($_POST['clickedItem'])){
+
+        // RECUPERO CLICKED_ITEM_INDEX
+        $clickedItem = $_POST['clickedItem'];
+
+        // SETTO LA VARIABILE DONE DELL'ITEM CLICCATO SU TRUE o FALSE
+        $dataDecoded[$clickedItem]['done'] = !$dataDecoded[$clickedItem]['done'];
+
+        // AGGIORNO IL FILE "TODOLIST.JSON"
+        file_put_contents('data/todolist.json', json_encode($dataDecoded));
+    }
+
+    // CONTROLLO SE è STATO ELIMINATO QUALCHE ELEMENTO
+    if(isset($_POST['deletedItem'])){
+
+        // RECUPERO DELETED_ITEM
+        $deletedItem = $_POST['deletedItem'];
+
+        // ELIMINO DALL'ARRAY L'ELEMENTO SELEZIONATO DALL'UTENTE
+        array_splice($dataDecoded, $deletedItem, 1);
+
+        // AGGIORNO IL FILE "TODOLIST.JSON"
+        file_put_contents('data/todolist.json', json_encode($dataDecoded));
     }
 
 // FINE OPERAZIONI DI MODIFICA ARRAY ASSOCIATIVO PHP
