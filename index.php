@@ -26,5 +26,8 @@
         <title>php-todo-list-json</title>
     </head>
     <body>
+        <div class="app">
+            
+        </div>
     </body>
 </html>
