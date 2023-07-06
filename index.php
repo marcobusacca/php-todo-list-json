@@ -26,8 +26,30 @@
         <title>php-todo-list-json</title>
     </head>
     <body>
-        <div id="app">
-
+        <div class="wrapper bg-body-secondary d-flex justify-content-center">
+            <div id="app">
+                <!-- Main -->
+                <main>
+                    <!-- Main Container -->
+                    <div class="container my-5">
+                        <!-- Main Row -->
+                        <div class="row">
+                            <!-- Title Col -->
+                            <div class="col-12 text-center my-3">
+                                <h1 class="display-1">Todo List</h1>
+                            </div>
+                            <!-- Todo List Col -->
+                            <div class="col-12 my-3">
+                                <!-- Todo List -->
+                                <ul class="list-group border border-2 rounded-2">
+                                    <li class="list-group-item">List Item</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <!-- Fine Main -->
+            </div>
         </div>
     </body>
 </html>
