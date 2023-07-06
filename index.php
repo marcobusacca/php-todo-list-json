@@ -44,7 +44,7 @@
                             <div class="col-12 my-3">
                                 <!-- Todo List -->
                                 <ul class="list-group border border-2 rounded-2">
-                                    <li class="list-group-item">List Item</li>
+                                    <li class="list-group-item" v-for="(item, index) in todoList" v-text="item.text"></li>
                                 </ul>
                             </div>
                         </div>

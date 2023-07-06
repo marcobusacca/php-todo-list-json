@@ -15,6 +15,8 @@ createApp({
         }
     },
     created() {
-        axios.get(this.apiUrl).then((result) => { });
+        axios.get(this.apiUrl).then((result) => {
+            console.log(result.data);
+        });
     },
 }).mount('#app'); // RICHIAMO IL CONTAINER HTML DOVE APPLICARE LA FUNZIONE CREATE_APP
