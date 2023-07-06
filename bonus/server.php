@@ -39,7 +39,7 @@
     // CONTROLLO SE è STATO CLICCATO QUALCHE ELEMENTO
     if(isset($_POST['clickedItem'])){
 
-        // RECUPERO CLICKED_ITEM_INDEX
+        // RECUPERO CLICKED_ITEM
         $clickedItem = $_POST['clickedItem'];
 
         // SETTO LA VARIABILE DONE DELL'ITEM CLICCATO SU TRUE o FALSE
