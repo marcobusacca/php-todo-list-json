@@ -57,7 +57,7 @@ createApp({
                 deletedItem: index,
             };
 
-            // CHIAMATA AXIOS POST INSERIMENTO DATI NEL SERVER.PHP
+            // CHIAMATA AXIOS POST ELIMINAZIONE DATI NEL SERVER.PHP
             axios.post(this.apiUrl, data, {
 
                 headers: { 'Content-Type': 'multipart/form-data' }
@@ -75,7 +75,7 @@ createApp({
                 clickedItem: index,
             };
 
-            // CHIAMATA AXIOS POST INSERIMENTO DATI NEL SERVER.PHP
+            // CHIAMATA AXIOS POST MODIFICA DATI NEL SERVER.PHP
             axios.post(this.apiUrl, data, {
 
                 headers: { 'Content-Type': 'multipart/form-data' }
